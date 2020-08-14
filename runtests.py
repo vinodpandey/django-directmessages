@@ -3,7 +3,7 @@ import sys
 from django.conf import global_settings, settings
 
 OUR_MIDDLEWARE = []
-OUR_MIDDLEWARE.extend(global_settings.MIDDLEWARE)
+OUR_MIDDLEWARE.extend([])
 OUR_MIDDLEWARE.extend([
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
