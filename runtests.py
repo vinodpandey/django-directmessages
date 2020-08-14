@@ -3,7 +3,7 @@ import sys
 from django.conf import global_settings, settings
 
 OUR_MIDDLEWARE = []
-OUR_MIDDLEWARE.extend(global_settings.MIDDLEWARE_CLASSES)
+OUR_MIDDLEWARE.extend(global_settings.MIDDLEWARE)
 OUR_MIDDLEWARE.extend([
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -20,8 +20,8 @@ settings.configure(
         'django.contrib.contenttypes',
         'directmessages',
     ],
-    ROOT_URLCONF='directmessages.urls',
-    MIDDLEWARE_CLASSES=OUR_MIDDLEWARE,
+    #ROOT_URLCONF='directmessages.urls',
+    MIDDLEWARE=OUR_MIDDLEWARE,
 )
 
 
